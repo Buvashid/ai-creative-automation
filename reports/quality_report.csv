@@ -1,21 +1,21 @@
 creative_id,language,output_file,status,qa_status,issues
-C001,English,C:\Users\prathmesh\OneDrive\Documents\college\Projects\ai-creative-automation\output\C001.png,GENERATED,PENDING_REVIEW,
-C002,English,C:\Users\prathmesh\OneDrive\Documents\college\Projects\ai-creative-automation\output\C002.png,GENERATED,PENDING_REVIEW,
-C003,English,C:\Users\prathmesh\OneDrive\Documents\college\Projects\ai-creative-automation\output\C003.png,GENERATED,PENDING_REVIEW,
-C004,English,C:\Users\prathmesh\OneDrive\Documents\college\Projects\ai-creative-automation\output\C004.png,GENERATED,PENDING_REVIEW,
-C005,English,C:\Users\prathmesh\OneDrive\Documents\college\Projects\ai-creative-automation\output\C005.png,GENERATED,PENDING_REVIEW,
-C006,English,C:\Users\prathmesh\OneDrive\Documents\college\Projects\ai-creative-automation\output\C006.png,GENERATED,PENDING_REVIEW,
-C007,English,C:\Users\prathmesh\OneDrive\Documents\college\Projects\ai-creative-automation\output\C007.png,GENERATED,PENDING_REVIEW,
-C008,English,C:\Users\prathmesh\OneDrive\Documents\college\Projects\ai-creative-automation\output\C008.png,GENERATED,PENDING_REVIEW,
-C009,English,C:\Users\prathmesh\OneDrive\Documents\college\Projects\ai-creative-automation\output\C009.png,GENERATED,PENDING_REVIEW,
-C010,English,C:\Users\prathmesh\OneDrive\Documents\college\Projects\ai-creative-automation\output\C010.png,GENERATED,PENDING_REVIEW,
-C011,Hindi,C:\Users\prathmesh\OneDrive\Documents\college\Projects\ai-creative-automation\output\C011.png,GENERATED_MANUAL_REVIEW,PENDING_REVIEW,Manual language review required for Hindi/Marathi
-C012,Hindi,C:\Users\prathmesh\OneDrive\Documents\college\Projects\ai-creative-automation\output\C012.png,GENERATED_MANUAL_REVIEW,PENDING_REVIEW,Manual language review required for Hindi/Marathi
-C013,Hindi,C:\Users\prathmesh\OneDrive\Documents\college\Projects\ai-creative-automation\output\C013.png,GENERATED_MANUAL_REVIEW,PENDING_REVIEW,Manual language review required for Hindi/Marathi
-C014,Hindi,C:\Users\prathmesh\OneDrive\Documents\college\Projects\ai-creative-automation\output\C014.png,GENERATED_MANUAL_REVIEW,PENDING_REVIEW,Manual language review required for Hindi/Marathi
-C015,Hindi,C:\Users\prathmesh\OneDrive\Documents\college\Projects\ai-creative-automation\output\C015.png,GENERATED_MANUAL_REVIEW,PENDING_REVIEW,Manual language review required for Hindi/Marathi
-C016,Marathi,C:\Users\prathmesh\OneDrive\Documents\college\Projects\ai-creative-automation\output\C016.png,GENERATED_MANUAL_REVIEW,PENDING_REVIEW,Manual language review required for Hindi/Marathi
-C017,Marathi,C:\Users\prathmesh\OneDrive\Documents\college\Projects\ai-creative-automation\output\C017.png,GENERATED_MANUAL_REVIEW,PENDING_REVIEW,Manual language review required for Hindi/Marathi
-C018,Marathi,C:\Users\prathmesh\OneDrive\Documents\college\Projects\ai-creative-automation\output\C018.png,GENERATED_MANUAL_REVIEW,PENDING_REVIEW,Manual language review required for Hindi/Marathi
-C019,Marathi,C:\Users\prathmesh\OneDrive\Documents\college\Projects\ai-creative-automation\output\C019.png,GENERATED_MANUAL_REVIEW,PENDING_REVIEW,Manual language review required for Hindi/Marathi
-C020,Marathi,C:\Users\prathmesh\OneDrive\Documents\college\Projects\ai-creative-automation\output\C020.png,GENERATED_MANUAL_REVIEW,PENDING_REVIEW,Manual language review required for Hindi/Marathi
+C001,English,output/C001.png,GENERATED,PENDING_REVIEW,
+C002,English,output/C002.png,GENERATED,PENDING_REVIEW,
+C003,English,output/C003.png,GENERATED,PENDING_REVIEW,
+C004,English,output/C004.png,GENERATED,PENDING_REVIEW,
+C005,English,output/C005.png,GENERATED,PENDING_REVIEW,
+C006,English,output/C006.png,GENERATED,PENDING_REVIEW,
+C007,English,output/C007.png,GENERATED,PENDING_REVIEW,
+C008,English,output/C008.png,GENERATED,PENDING_REVIEW,
+C009,English,output/C009.png,GENERATED,PENDING_REVIEW,
+C010,English,output/C010.png,GENERATED,PENDING_REVIEW,
+C011,Hindi,output/C011.png,GENERATED_MANUAL_REVIEW,PENDING_REVIEW,Manual language review required for Hindi/Marathi
+C012,Hindi,output/C012.png,GENERATED_MANUAL_REVIEW,PENDING_REVIEW,Manual language review required for Hindi/Marathi
+C013,Hindi,output/C013.png,GENERATED_MANUAL_REVIEW,PENDING_REVIEW,Manual language review required for Hindi/Marathi
+C014,Hindi,output/C014.png,GENERATED_MANUAL_REVIEW,PENDING_REVIEW,Manual language review required for Hindi/Marathi
+C015,Hindi,output/C015.png,GENERATED_MANUAL_REVIEW,PENDING_REVIEW,Manual language review required for Hindi/Marathi
+C016,Marathi,output/C016.png,GENERATED_MANUAL_REVIEW,PENDING_REVIEW,Manual language review required for Hindi/Marathi
+C017,Marathi,output/C017.png,GENERATED_MANUAL_REVIEW,PENDING_REVIEW,Manual language review required for Hindi/Marathi
+C018,Marathi,output/C018.png,GENERATED_MANUAL_REVIEW,PENDING_REVIEW,Manual language review required for Hindi/Marathi
+C019,Marathi,output/C019.png,GENERATED_MANUAL_REVIEW,PENDING_REVIEW,Manual language review required for Hindi/Marathi
+C020,Marathi,output/C020.png,GENERATED_MANUAL_REVIEW,PENDING_REVIEW,Manual language review required for Hindi/Marathi

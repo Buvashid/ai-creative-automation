@@ -118,7 +118,7 @@ py -m app.generate_samples
 py -m pytest
 ```
 
-The current test suite result is **32 passed**.
+The current test suite result is **37 passed**.
 
 ## CSV schema
 

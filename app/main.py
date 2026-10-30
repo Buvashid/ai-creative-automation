@@ -1,6 +1,7 @@
 """Run the PaisaPath creative generation pipeline."""
 
 import csv
+import os
 from pathlib import Path
 
 from app.config import CREATIVES_CSV, OUTPUT_DIR, REPORTS_DIR
@@ -31,6 +32,12 @@ def _write_report(report_path: Path, rows: list[dict[str, str]]) -> None:
 
 def _is_blocking_issue(issue: str) -> bool:
     return issue.startswith("ERROR:") or issue.startswith(COUNT_WARNING_PREFIX)
+
+
+def _report_output_path(output_path: Path, reports_dir: Path) -> str:
+    """Return an output path relative to the project root used by the report."""
+    project_root = reports_dir.resolve().parent
+    return Path(os.path.relpath(output_path, project_root)).as_posix()
 
 
 def run_pipeline(
@@ -118,7 +125,7 @@ def run_pipeline(
             {
                 "creative_id": creative_id,
                 "language": language,
-                "output_file": str(output_path),
+                "output_file": _report_output_path(output_path, reports_dir),
                 "status": status,
                 "qa_status": initial_qa_status(True),
                 "issues": (
