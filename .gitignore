@@ -5,10 +5,5 @@ __pycache__/
 venv/
 *.egg-info/
 
-output/*
-!output/.gitkeep
-reports/*
-!reports/.gitkeep
-
 .env
 .DS_Store
