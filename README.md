@@ -293,7 +293,6 @@ Before publication or submission, verify:
 - No misleading or unsupported financial claims.
 - Accurate generation and QA statuses.
 
-## 15. Project Limitations
 
 ## 15. Project Limitations
 
