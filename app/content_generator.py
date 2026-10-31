@@ -38,7 +38,35 @@ def prepare_copy(specification: Mapping[str, object]) -> dict[str, object]:
     offer = values["offer"]
     if language == "English":
         headline = f"{product} for {audience}"
-        body = f"Simple tools for {audience} to explore {product}."
+
+        product_benefits = {
+            "Budgeting tools": (
+                "Build a clearer picture of monthly spending "
+                "and plan your budget with confidence."
+            ),
+            "Money planning": (
+                "Understand your monthly expenses and develop "
+                "a practical approach to managing money."
+            ),
+            "Personal loan education": (
+                "Learn about borrowing basics, repayment terms, "
+                "and the costs to consider before taking a loan."
+            ),
+            "Insurance education": (
+                "Understand common insurance terms and learn "
+                "what to consider when comparing coverage."
+            ),
+            "Investing basics": (
+                "Learn about investment fundamentals, different "
+                "options, and the importance of informed decisions."
+            ),
+        }
+
+        body = product_benefits.get(
+            product,
+            f"Explore the basics of {product.lower()} "
+            "and learn about the options available."
+        )
     elif language == "Hindi":
         headline, body = _hindi_copy(product, audience)
     else:
