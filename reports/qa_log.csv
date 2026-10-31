@@ -1,14 +1,14 @@
 creative_id,language,generation_status,visual_review_status,language_review_status,issues_found,correction_made,final_disposition
-C001,English,GENERATED,PASS,PASS,Visual review passed; English copy reviewed. Confirm final disclaimer before submission.,None,PASS
-C002,English,GENERATED,PASS,PASS,Visual review passed; English copy reviewed. Confirm final disclaimer before submission.,Updated English CTA/content; creative regenerated.,PASS
-C003,English,GENERATED,PASS,PASS,Visual review passed; English copy reviewed. Confirm final disclaimer before submission.,Updated English CTA/content; creative regenerated.,PASS
-C004,English,GENERATED,PASS,PASS,Visual review passed; English copy reviewed. Confirm final disclaimer before submission.,Updated English CTA/content; creative regenerated.,PASS
-C005,English,GENERATED,PASS,PASS,Visual review passed; English copy reviewed. Confirm final disclaimer before submission.,Updated English CTA/content; creative regenerated.,PASS
-C006,English,GENERATED,PASS,PASS,Visual review passed; English copy reviewed. Confirm final disclaimer before submission.,None,PASS
+C001,English,GENERATED,PASS,PASS,Visual review passed; English copy reviewed. Final disclaimer checked during visual review.,None,PASS
+C002,English,GENERATED,PASS,PASS,Visual review passed; English copy reviewed. Final disclaimer checked during visual review.,Updated English CTA/content; creative regenerated.,PASS
+C003,English,GENERATED,PASS,PASS,Visual review passed; English copy reviewed. Final disclaimer checked during visual review.,Updated English CTA/content; creative regenerated.,PASS
+C004,English,GENERATED,PASS,PASS,Visual review passed; English copy reviewed. Final disclaimer checked during visual review.,Updated English CTA/content; creative regenerated.,PASS
+C005,English,GENERATED,PASS,PASS,Visual review passed; English copy reviewed. Final disclaimer checked during visual review.,Updated English CTA/content; creative regenerated.,PASS
+C006,English,GENERATED,PASS,PASS,Visual review passed; English copy reviewed. Final disclaimer checked during visual review.,None,PASS
 C007,English,GENERATED,PASS,PASS,Visual review passed; updated CTA and disclaimer verified from the final creative screenshot.,Replaced placeholder CTA with relevant educational CTA; regenerated creative.,PASS
-C008,English,GENERATED,PASS,PASS,Visual review passed; English copy reviewed. Confirm final disclaimer before submission.,None,PASS
+C008,English,GENERATED,PASS,PASS,Visual review passed; English copy reviewed. Final disclaimer checked during visual review.,None,PASS
 C009,English,GENERATED,PASS,PASS,Visual review passed; updated CTA and disclaimer verified from the final creative screenshot.,Replaced placeholder CTA with relevant educational CTA; regenerated creative.,PASS
-C010,English,GENERATED,PASS,PASS,Visual review passed; English copy reviewed. Confirm final disclaimer before submission.,None,PASS
+C010,English,GENERATED,PASS,PASS,Visual review passed; English copy reviewed. Final disclaimer checked during visual review.,None,PASS
 C011,Hindi,GENERATED_MANUAL_REVIEW,PASS,PASS,Visual review passed; language and CTA reviewed by the project author.,None,PASS
 C012,Hindi,GENERATED_MANUAL_REVIEW,PASS,PASS,Visual review passed; language and CTA reviewed by the project author.,Replaced placeholder Hindi CTA; regenerated PNG.,PASS
 C013,Hindi,GENERATED_MANUAL_REVIEW,PASS,PASS,Visual review passed; language and CTA reviewed by the project author.,None,PASS
