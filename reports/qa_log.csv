@@ -1,21 +1,21 @@
 creative_id,language,generation_status,visual_review_status,language_review_status,issues_found,correction_made,final_disposition
-C001,English,GENERATED,PASS,PENDING_REVIEW,Visual review passed; confirm final copy and disclaimer at full size before final approval.,None,PENDING_REVIEW
-C002,English,GENERATED,PASS,PENDING_REVIEW,Visual review passed; confirm final copy and disclaimer at full size before final approval.,Updated English CTA/content; creative regenerated.,PENDING_REVIEW
-C003,English,GENERATED,PASS,PENDING_REVIEW,Visual review passed; confirm final copy and disclaimer at full size before final approval.,Updated English CTA/content; creative regenerated.,PENDING_REVIEW
-C004,English,GENERATED,PASS,PENDING_REVIEW,Visual review passed; confirm final copy and disclaimer at full size before final approval.,Updated English CTA/content; creative regenerated.,PENDING_REVIEW
-C005,English,GENERATED,PASS,PENDING_REVIEW,Visual review passed; confirm final copy and disclaimer at full size before final approval.,Updated English CTA/content; creative regenerated.,PENDING_REVIEW
-C006,English,GENERATED,PASS,PENDING_REVIEW,Visual review passed; confirm final copy and disclaimer at full size before final approval.,None,PENDING_REVIEW
+C001,English,GENERATED,PASS,PASS,Visual review passed; English copy reviewed. Confirm final disclaimer before submission.,None,PASS
+C002,English,GENERATED,PASS,PASS,Visual review passed; English copy reviewed. Confirm final disclaimer before submission.,Updated English CTA/content; creative regenerated.,PASS
+C003,English,GENERATED,PASS,PASS,Visual review passed; English copy reviewed. Confirm final disclaimer before submission.,Updated English CTA/content; creative regenerated.,PASS
+C004,English,GENERATED,PASS,PASS,Visual review passed; English copy reviewed. Confirm final disclaimer before submission.,Updated English CTA/content; creative regenerated.,PASS
+C005,English,GENERATED,PASS,PASS,Visual review passed; English copy reviewed. Confirm final disclaimer before submission.,Updated English CTA/content; creative regenerated.,PASS
+C006,English,GENERATED,PASS,PASS,Visual review passed; English copy reviewed. Confirm final disclaimer before submission.,None,PASS
 C007,English,GENERATED,PASS,PENDING_REVIEW,Visual review passed; verify updated CTA and disclaimer at full size before final approval.,Replaced placeholder CTA with relevant educational CTA; regenerated creative.,PENDING_REVIEW
-C008,English,GENERATED,PASS,PENDING_REVIEW,Visual review passed; confirm final copy and disclaimer at full size before final approval.,None,PENDING_REVIEW
+C008,English,GENERATED,PASS,PASS,Visual review passed; English copy reviewed. Confirm final disclaimer before submission.,None,PASS
 C009,English,GENERATED,PASS,PENDING_REVIEW,Visual review passed; verify updated CTA and disclaimer at full size before final approval.,Replaced placeholder CTA with relevant educational CTA; regenerated creative.,PENDING_REVIEW
-C010,English,GENERATED,PASS,PENDING_REVIEW,Visual review passed; confirm final copy and disclaimer at full size before final approval.,None,PENDING_REVIEW
+C010,English,GENERATED,PASS,PASS,Visual review passed; English copy reviewed. Confirm final disclaimer before submission.,None,PASS
 C011,Hindi,GENERATED_MANUAL_REVIEW,PASS,PENDING_REVIEW,Visual review passed; Hindi wording and CTA require language verification before final approval.,None,PENDING_REVIEW
-C012,Hindi,GENERATED_MANUAL_REVIEW,PASS,PENDING_REVIEW,Visual review passed; Hindi wording and CTA require language verification before final approval.,None,PENDING_REVIEW
+C012,Hindi,GENERATED_MANUAL_REVIEW,PASS,PENDING_REVIEW,CTA updated and PNG regenerated; verify final wording and disclaimer before approval.,Replaced placeholder Hindi CTA; regenerated PNG.,PENDING_REVIEW
 C013,Hindi,GENERATED_MANUAL_REVIEW,PASS,PENDING_REVIEW,Visual review passed; Hindi wording and CTA require language verification before final approval.,None,PENDING_REVIEW
-C014,Hindi,GENERATED_MANUAL_REVIEW,PASS,PENDING_REVIEW,Visual review passed; Hindi wording and CTA require language verification before final approval.,None,PENDING_REVIEW
+C014,Hindi,GENERATED_MANUAL_REVIEW,PASS,PENDING_REVIEW,CTA updated and PNG regenerated; verify final wording and disclaimer before approval.,Replaced placeholder Hindi CTA; regenerated PNG.,PENDING_REVIEW
 C015,Hindi,GENERATED_MANUAL_REVIEW,PASS,PENDING_REVIEW,Visual review passed; Hindi wording and CTA require language verification before final approval.,None,PENDING_REVIEW
 C016,Marathi,GENERATED_MANUAL_REVIEW,PASS,PENDING_REVIEW,Visual review passed; Marathi wording and CTA require language verification before final approval.,None,PENDING_REVIEW
-C017,Marathi,GENERATED_MANUAL_REVIEW,PASS,PENDING_REVIEW,Visual review passed; Marathi wording and CTA require language verification before final approval.,None,PENDING_REVIEW
+C017,Marathi,GENERATED_MANUAL_REVIEW,PASS,PENDING_REVIEW,CTA updated and PNG regenerated; verify final wording and disclaimer before approval.,Replaced placeholder Marathi CTA; regenerated PNG.,PENDING_REVIEW
 C018,Marathi,GENERATED_MANUAL_REVIEW,PASS,PENDING_REVIEW,Visual review passed; Marathi wording and CTA require language verification before final approval.,None,PENDING_REVIEW
-C019,Marathi,GENERATED_MANUAL_REVIEW,PASS,PENDING_REVIEW,Visual review passed; Marathi wording and CTA require language verification before final approval.,None,PENDING_REVIEW
+C019,Marathi,GENERATED_MANUAL_REVIEW,PASS,PENDING_REVIEW,CTA updated and PNG regenerated; verify final wording and disclaimer before approval.,Replaced placeholder Marathi CTA; regenerated PNG.,PENDING_REVIEW
 C020,Marathi,GENERATED_MANUAL_REVIEW,PASS,PENDING_REVIEW,Visual review passed; Marathi wording and CTA require language verification before final approval.,None,PENDING_REVIEW
