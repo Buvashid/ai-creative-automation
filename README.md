@@ -1,128 +1,191 @@
-# PaisaPath: One Template, Twenty Creatives
+# PaisaPath — One Template, Twenty Creatives
 
-PaisaPath is a lightweight Python creative-automation project for the Yanisa
-Execution assignment. It turns 20 CSV creative specifications into branded
-personal-finance demonstration advertisements. The goal is to reduce repetitive
-manual work while keeping supplied offers unchanged, validating input, and
-making human QA explicit.
+PaisaPath is a Python-based creative automation project developed for the Yanisa Execution assignment. It transforms 20 structured creative specifications into branded, 1080 × 1080 personal-finance demonstration advertisements using a reusable template and a reproducible generation pipeline.
 
-PaisaPath and all offers in this repository are fictional demonstration
-material. They are not real financial products and are not financial advice.
+The project demonstrates how structured data, automated copy preparation, multilingual text rendering, validation, and quality reporting can reduce repetitive creative-production work while preserving supplied offers.
 
-## Features
+**Disclaimer:** PaisaPath and all offers in this repository are fictional. The creatives are demonstration material, not real financial products or financial advice.
 
-- Reusable 1080 x 1080 Pillow template with consistent PaisaPath branding.
-- CSV-driven generation for exactly 20 creative specifications.
+## 1. Brand Identity
+
+- **Brand:** PaisaPath
+- **Category:** Personal finance education and budgeting
+- **Brand personality:** Clear, approachable, practical, and responsible
+- **Tone of voice:** Simple, encouraging, and informative
+
+The visual system uses a consistent square-advertisement layout, shared typography, and a restrained color palette. The reusable template keeps the overall composition consistent while allowing individual creatives to change according to their CSV specifications.
+
+Before submission, verify the precise brand colors, font names, and logo implementation against the actual renderer. Do not document unverified design specifications.
+
+## 2. Features
+
+- Reusable 1080 × 1080 PNG template.
+- CSV-driven generation for 20 creative specifications.
 - English, Hindi, and Marathi copy support.
 - Required-field, duplicate-ID, language, blank-value, and row-count validation.
-- Claim-safe copy preparation that preserves supplied offers exactly.
-- Per-creative generation failure handling.
-- Pytest coverage for loading, validation, copy generation, rendering, and the
-  pipeline.
-- CSV quality reporting with separate generation and QA statuses.
-- Visual audit documenting programmatic checks and remaining human review.
+- Copy preparation that preserves supplied offers exactly.
+- Explicit fictional-demonstration disclaimers.
+- Per-creative failure handling.
+- Automated tests for loading, validation, copy generation, rendering, and pipeline execution.
+- Generation and QA reports with separate statuses.
+- Visual audit documentation identifying completed checks and outstanding human review.
 
-Generated creatives are not automatically approved. Successful files receive
-`qa_status=PENDING_REVIEW`; Hindi and Marathi files are also flagged for manual
-language review.
+Generated creatives are not automatically approved. Successful outputs remain `PENDING_REVIEW` until human QA is completed. Hindi and Marathi creatives require additional linguistic review.
 
-## Pipeline
+## 3. Pipeline Architecture
 
 ```text
 data/creatives.csv
         |
         v
-CSV loading and whitespace normalization
+CSV loading and normalization
         |
         v
-Whole-dataset validation
+Dataset validation
         |
         v
-Claim-safe content generation
+Structured copy preparation
         |
         v
-Pillow 1080 x 1080 PNG rendering
+Multilingual text shaping and rendering
         |
         v
-reports/quality_report.csv
+1080 × 1080 PNG outputs
+        |
+        v
+Quality report and visual audit
 ```
 
-Validation blocks the batch when required fields are invalid, IDs are
-duplicated, languages are unsupported, or the row count is not exactly 20.
-Individual rendering failures are recorded and do not stop later rows.
+The pipeline validates the dataset before generation. Invalid required fields, duplicate IDs, unsupported languages, or an incorrect row count block the batch. Individual rendering failures are recorded so that later rows can still be processed.
 
-## Tech stack
+## 4. Template Design
 
-- Python
-- Pandas for CSV loading
-- Pillow for image rendering
-- pytest for automated tests
+The master template separates shared design elements from creative-specific content.
 
-## Project structure
+| Element | Treatment |
+|---|---|
+| Canvas dimensions | Fixed at 1080 × 1080 |
+| Brand identity and layout | Shared across creatives |
+| Product | Data-driven |
+| Audience | Data-driven |
+| Offer | Data-driven; supplied text is preserved |
+| Language | Data-driven |
+| Disclaimer | Selected according to language |
+| Typography and text positioning | Controlled by the renderer |
+| Final rendered PNG | Generated by the pipeline |
+
+The project uses deterministic Python rendering for the final images. Do not describe the PNG generation itself as AI-generated unless an image-generation model is actually part of that process.
+
+## 5. Technology Stack
+
+- **Python** — pipeline and application logic
+- **Pandas** — CSV loading and data handling
+- **Pillow** — image composition and PNG output
+- **HarfBuzz** — complex-script text shaping
+- **FreeType** — font loading and glyph rendering
+- **pytest** — automated testing
+
+## 6. Project Structure
 
 ```text
 app/
-  config.py              Shared paths and canvas size
-  content_generator.py   Structured, claim-safe copy generation
-  data_loader.py         CSV loading and normalization
-  generate_samples.py    Three-language sample generator
-  main.py                End-to-end pipeline
-  quality_checker.py     QA status values
-  template_renderer.py   Pillow template renderer
-  validator.py           Dataset validation
+    config.py
+    content_generator.py
+    data_loader.py
+    generate_samples.py
+    main.py
+    quality_checker.py
+    template_renderer.py
+    validator.py
+
 data/
-  creatives.csv          The 20 creative specifications
-assets/                  Reserved branding assets
-output/                  Generated PNG files
+    creatives.csv
+
+assets/
+    # Branding assets, if configured
+
+output/
+    C001.png
+    ...
+    C020.png
+
 reports/
-  quality_report.csv     Generation and QA results
-  visual_audit.md        Programmatic and human-review audit
-tests/                   Automated tests
-requirements.txt         Python dependencies
+    quality_report.csv
+    visual_audit.md
+    qa_log.csv
+
+tests/
+docs/
+requirements.txt
+README.md
 ```
 
-## Windows setup
+The repository may contain additional configuration and documentation files. The structure above highlights the primary pipeline components and outputs.
 
-From the project root in PowerShell:
+## 7. Windows Setup
+
+Open PowerShell in the project root.
+
+Create and activate a virtual environment:
 
 ```powershell
 py -m venv .venv
 .\.venv\Scripts\Activate.ps1
-py -m pip install -r requirements.txt
 ```
 
-If PowerShell blocks activation, run the commands with the virtual
-environment's interpreter instead:
+Install dependencies:
 
 ```powershell
-.\.venv\Scripts\python.exe -m pip install -r requirements.txt
+python -m pip install -r requirements.txt
 ```
 
-## Run the pipeline
+### Configure the Devanagari font
 
-With the virtual environment activated:
+Hindi and Marathi rendering requires a compatible Devanagari font. On Windows, Nirmala UI is one possible option.
+
+For this development environment, configure the font collection as follows:
 
 ```powershell
-py -m app.main
+$env:PAISAPATH_DEVANAGARI_FONT_PATH = "C:\Windows\Fonts\Nirmala.ttc"
 ```
 
-To generate the three small English, Hindi, and Marathi samples:
+This environment variable applies to the current PowerShell session. Use the actual font path available on your system.
+
+## 8. Run the Pipeline
+
+With the virtual environment activated and the font configured:
 
 ```powershell
-py -m app.generate_samples
+python -m app.main
 ```
 
-## Run tests
+Generate the three-language sample set:
 
 ```powershell
-py -m pytest
+python -m app.generate_samples
 ```
 
-The current test suite result is **37 passed**.
+The main pipeline reads the creative specifications, validates the dataset, prepares the copy, renders the outputs, and writes the quality report.
 
-## CSV schema
+## 9. Run Automated Tests
 
-`data/creatives.csv` must contain these columns in this order:
+Execute:
+
+```powershell
+python -m pytest
+```
+
+**Latest locally verified result: 51 tests passed in 4.82 seconds.**
+
+This result verifies the current local test suite. Re-run the command against the checked-out commit when reproducing the project or reporting results for a different revision.
+
+Automated tests do not establish that every creative is aesthetically effective, linguistically natural, or ready for publication.
+
+## 10. CSV Schema
+
+The input file is `data/creatives.csv`.
+
+Required columns:
 
 ```text
 creative_id,product,audience,offer,language
@@ -135,52 +198,107 @@ creative_id,product,audience,offer,language
 C001,Budgeting tools,Young professionals,Explore budgeting tools,English
 ```
 
-The project expects IDs `C001` through `C020`, non-empty fields, and only
-`English`, `Hindi`, or `Marathi`. Offers are copied exactly as supplied; the
-application does not add rates, returns, guarantees, or other claims.
+The expected dataset contains exactly 20 creatives, identified as `C001` through `C020`.
 
-## Outputs and QA
+Supported languages:
 
-- PNG advertisements: `output/C001.png` through `output/C020.png`
-- Generation and QA report: `reports/quality_report.csv`
-- Visual audit: `reports/visual_audit.md`
+- English
+- Hindi
+- Marathi
 
-The report keeps generation status separate from QA status:
+Required fields must be populated, and duplicate creative IDs are rejected. Offers are preserved as supplied; the application does not intentionally add rates, returns, guarantees, or other financial claims.
 
-- `GENERATED` or `GENERATED_MANUAL_REVIEW`: rendering completed.
-- `FAILED`: that creative could not be generated.
-- `BLOCKED`: the batch could not start because validation failed.
-- `PENDING_REVIEW`: generated output awaits human QA.
-- `FIX_REQUIRED`: generation or validation requires correction.
+## 11. Outputs and Quality Assurance
 
-The 20 images have passed basic file, dimension, and consistency checks, but
-remain `PENDING_REVIEW`. Full-size readability, exact text verification, and
-Hindi/Marathi linguistic accuracy still require human review. No creative is
-fully approved by automated tests or file generation alone.
+Generated advertisements:
 
-## Font configuration
-
-English rendering searches common Windows fonts. Hindi and Marathi rendering
-requires a Windows Devanagari-compatible font such as Nirmala UI or Mangal.
-The renderer does not silently replace unsupported characters.
-
-To configure a specific Devanagari TrueType font in PowerShell:
-
-```powershell
-$env:PAISAPATH_DEVANAGARI_FONT_PATH = "C:\Path\To\NirmalaUI.ttf"
-py -m app.main
+```text
+output/C001.png
+...
+output/C020.png
 ```
 
-The code verifies that the configured file exists. If no suitable font is
-available, Hindi and Marathi creatives are reported as failures with a clear
-configuration message. Pillow RAQM shaping is used only when available;
-Devanagari output still requires visual inspection.
+Reports:
 
-## Known issue and handling
+- `reports/quality_report.csv` — generation results and QA statuses
+- `reports/visual_audit.md` — documented checks and remaining human review
+- `reports/qa_log.csv` — QA tracking, where maintained by the current pipeline
 
-The pipeline encountered missing Devanagari fonts on Windows during Hindi and
-Marathi generation. This is handled explicitly: the renderer supports
-`PAISAPATH_DEVANAGARI_FONT_PATH` and reports a clear error instead of silently
-rendering replacement boxes. Configure a compatible font before regenerating
-those creatives; the repository does not claim that font configuration is
-complete on every machine.
+### Status meanings
+
+| Status | Meaning |
+|---|---|
+| `GENERATED` | Rendering completed |
+| `GENERATED_MANUAL_REVIEW` | Rendering completed, with manual review needed |
+| `FAILED` | A creative failed during generation |
+| `BLOCKED` | Dataset validation prevented the batch from starting |
+| `PENDING_REVIEW` | Generated output awaits human QA |
+| `FIX_REQUIRED` | A correction is required |
+
+### Verified checks and limitations
+
+The project includes automated checks for input validation, rendering behavior, and pipeline execution. The current test suite contains 51 passing tests.
+
+Separate programmatic checks previously confirmed that the supplied offers and language-specific disclaimer strings matched the CSV specifications for all 20 rows.
+
+These checks are not equivalent to complete visual or linguistic approval. Full-size readability, clipping, exact visible text in every rendered image, and Hindi/Marathi linguistic accuracy must be assessed before the creatives can be considered final.
+
+Do not mark a creative approved merely because its PNG exists or its automated tests pass.
+
+## 12. Multilingual Rendering
+
+Devanagari text requires correct shaping and glyph rendering. The renderer uses HarfBuzz for shaping and FreeType for glyph rendering, with an explicit font-face index and no-hinting glyph loading in the current implementation.
+
+The configured font path is read from:
+
+```powershell
+$env:PAISAPATH_DEVANAGARI_FONT_PATH
+```
+
+For example:
+
+```powershell
+$env:PAISAPATH_DEVANAGARI_FONT_PATH = "C:\Windows\Fonts\Nirmala.ttc"
+python -m app.main
+```
+
+A suitable font must be installed and accessible. Font availability, glyph coverage, shaping, and visual output can vary across environments, so multilingual output still requires inspection.
+
+## 13. Reproducible Copy Preparation
+
+The input CSV is the source of truth for product, audience, offer, and language values. Copy preparation applies the project's rules before rendering, including preserving supplied offers and selecting the corresponding disclaimer.
+
+To reproduce the current creative set:
+
+1. Use the committed `data/creatives.csv`.
+2. Install the dependencies listed in `requirements.txt`.
+3. Configure a compatible Devanagari font.
+4. Run `python -m app.main`.
+5. Run `python -m pytest`.
+6. Inspect the PNGs and review the generated reports.
+
+When changing prompts or copy-generation rules, document the input, instructions, expected constraints, and output so another person can reproduce the behavior.
+
+## 14. AI Tools and Human Review
+
+Document only tools actually used in the implementation and content-development workflow. Distinguish between tools used to assist with coding or copy preparation and the Python pipeline that renders the final PNGs.
+
+Before publication or submission, verify:
+
+- Brand consistency across all 20 creatives.
+- Exact visible offers and disclaimers.
+- English, Hindi, and Marathi spelling and grammar.
+- Text readability at full size.
+- No clipping, overlapping, or unsupported glyphs.
+- No misleading or unsupported financial claims.
+- Accurate generation and QA statuses.
+
+## 15. Project Limitations
+
+## 15. Project Limitations
+
+- All brand content and offers are fictional and intended for demonstration purposes only.
+- Automated validation cannot replace human review of Hindi and Marathi grammar, spelling, meaning, and cultural appropriateness.
+- Regional-language content remains pending human review until a qualified reviewer verifies it.
+- Generated creatives must not be interpreted as real financial offers or financial advice.
+- Visual rendering tests verify technical output but do not guarantee the accuracy or suitability of every creative.
