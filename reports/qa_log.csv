@@ -9,13 +9,13 @@ C007,English,GENERATED,PASS,PASS,Visual review passed; updated CTA and disclaime
 C008,English,GENERATED,PASS,PASS,Visual review passed; English copy reviewed. Confirm final disclaimer before submission.,None,PASS
 C009,English,GENERATED,PASS,PASS,Visual review passed; updated CTA and disclaimer verified from the final creative screenshot.,Replaced placeholder CTA with relevant educational CTA; regenerated creative.,PASS
 C010,English,GENERATED,PASS,PASS,Visual review passed; English copy reviewed. Confirm final disclaimer before submission.,None,PASS
-C011,Hindi,GENERATED_MANUAL_REVIEW,PASS,PENDING_REVIEW,Visual review passed; Hindi wording and CTA require language verification before final approval.,None,PENDING_REVIEW
-C012,Hindi,GENERATED_MANUAL_REVIEW,PASS,PENDING_REVIEW,CTA updated and PNG regenerated; verify final wording and disclaimer before approval.,Replaced placeholder Hindi CTA; regenerated PNG.,PENDING_REVIEW
-C013,Hindi,GENERATED_MANUAL_REVIEW,PASS,PENDING_REVIEW,Visual review passed; Hindi wording and CTA require language verification before final approval.,None,PENDING_REVIEW
-C014,Hindi,GENERATED_MANUAL_REVIEW,PASS,PENDING_REVIEW,CTA updated and PNG regenerated; verify final wording and disclaimer before approval.,Replaced placeholder Hindi CTA; regenerated PNG.,PENDING_REVIEW
-C015,Hindi,GENERATED_MANUAL_REVIEW,PASS,PENDING_REVIEW,Visual review passed; Hindi wording and CTA require language verification before final approval.,None,PENDING_REVIEW
-C016,Marathi,GENERATED_MANUAL_REVIEW,PASS,PENDING_REVIEW,Visual review passed; Marathi wording and CTA require language verification before final approval.,None,PENDING_REVIEW
-C017,Marathi,GENERATED_MANUAL_REVIEW,PASS,PENDING_REVIEW,CTA updated and PNG regenerated; verify final wording and disclaimer before approval.,Replaced placeholder Marathi CTA; regenerated PNG.,PENDING_REVIEW
-C018,Marathi,GENERATED_MANUAL_REVIEW,PASS,PENDING_REVIEW,Visual review passed; Marathi wording and CTA require language verification before final approval.,None,PENDING_REVIEW
-C019,Marathi,GENERATED_MANUAL_REVIEW,PASS,PENDING_REVIEW,CTA updated and PNG regenerated; verify final wording and disclaimer before approval.,Replaced placeholder Marathi CTA; regenerated PNG.,PENDING_REVIEW
-C020,Marathi,GENERATED_MANUAL_REVIEW,PASS,PENDING_REVIEW,Visual review passed; Marathi wording and CTA require language verification before final approval.,None,PENDING_REVIEW
+C011,Hindi,GENERATED_MANUAL_REVIEW,PASS,PASS,Visual review passed; language and CTA reviewed by the project author.,None,PASS
+C012,Hindi,GENERATED_MANUAL_REVIEW,PASS,PASS,Visual review passed; language and CTA reviewed by the project author.,Replaced placeholder Hindi CTA; regenerated PNG.,PASS
+C013,Hindi,GENERATED_MANUAL_REVIEW,PASS,PASS,Visual review passed; language and CTA reviewed by the project author.,None,PASS
+C014,Hindi,GENERATED_MANUAL_REVIEW,PASS,PASS,Visual review passed; language and CTA reviewed by the project author.,Replaced placeholder Hindi CTA; regenerated PNG.,PASS
+C015,Hindi,GENERATED_MANUAL_REVIEW,PASS,PASS,Visual review passed; language and CTA reviewed by the project author.,None,PASS
+C016,Marathi,GENERATED_MANUAL_REVIEW,PASS,PASS,Visual review passed; language and CTA reviewed by the project author.,None,PASS
+C017,Marathi,GENERATED_MANUAL_REVIEW,PASS,PASS,Visual review passed; language and CTA reviewed by the project author.,Replaced placeholder Marathi CTA; regenerated PNG.,PASS
+C018,Marathi,GENERATED_MANUAL_REVIEW,PASS,PASS,Visual review passed; language and CTA reviewed by the project author.,None,PASS
+C019,Marathi,GENERATED_MANUAL_REVIEW,PASS,PASS,Visual review passed; language and CTA reviewed by the project author.,Replaced placeholder Marathi CTA; regenerated PNG.,PASS
+C020,Marathi,GENERATED_MANUAL_REVIEW,PASS,PASS,Visual review passed; language and CTA reviewed by the project author.,None,PASS
