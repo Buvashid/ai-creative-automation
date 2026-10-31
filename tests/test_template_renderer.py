@@ -1,7 +1,7 @@
 from pathlib import Path
 
 import pytest
-from PIL import Image
+from PIL import Image, ImageChops
 
 from app.template_renderer import (
     _ShapedFont,
@@ -119,6 +119,22 @@ def test_devanagari_conjunct_is_shaped_to_a_ligature(devanagari_font):
 
 
 @pytest.mark.parametrize(
+    "text",
+    [
+        "क्षि निवेश",
+        "मूलभूत गोष्टी",
+    ],
+)
+def test_devanagari_draw_line_places_glyphs_on_canvas(text, devanagari_font):
+    font = _ShapedFont(devanagari_font, 34)
+    image = Image.new("RGB", (500, 100), "white")
+
+    font.draw_line(image, text, (20, 20), "#102A43")
+
+    assert ImageChops.difference(image, Image.new("RGB", image.size, "white")).getbbox()
+
+
+@pytest.mark.parametrize(
     ("language", "text"),
     [
         ("Hindi", "निवेश की बुनियादी बातें समझें"),
@@ -143,3 +159,8 @@ def test_render_creative_shapes_devanagari_text(
     with Image.open(output_path) as image:
         assert image.size == (1080, 1080)
         assert image.format == "PNG"
+        background = Image.new("RGB", image.size, "#F7F1E5")
+        assert ImageChops.difference(
+            image.crop((72, 340, 1008, 930)),
+            background.crop((72, 340, 1008, 930)),
+        ).getbbox()

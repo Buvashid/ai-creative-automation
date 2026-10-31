@@ -35,7 +35,7 @@ class _ShapedFont:
             )
 
         font_data = font_path.read_bytes()
-        self.face = freetype.Face(str(font_path))
+        self.face = freetype.Face(str(font_path), index=0)
         self.face.set_pixel_sizes(0, size)
         self.hb_face = harfbuzz.Face(font_data, self.face.face_index)
         self.hb_font = harfbuzz.Font(self.hb_face)
@@ -70,7 +70,10 @@ class _ShapedFont:
         baseline = top + self.ascent
         pen_x = float(x)
         for info, glyph_position in zip(infos, positions):
-            self.face.load_glyph(info.codepoint, freetype.FT_LOAD_RENDER)
+            self.face.load_glyph(
+                info.codepoint,
+                freetype.FT_LOAD_RENDER | freetype.FT_LOAD_NO_HINTING,
+            )
             bitmap = self.face.glyph.bitmap
             if bitmap.width and bitmap.rows:
                 bitmap_data = bytes(bitmap.buffer)
